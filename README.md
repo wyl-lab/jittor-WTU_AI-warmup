@@ -1,4 +1,4 @@
-# jittor----
+# jittor-纺大人工智能小队-热身赛
 jittor-warmup_match
 
 | 第三届计图挑战赛开源文档
