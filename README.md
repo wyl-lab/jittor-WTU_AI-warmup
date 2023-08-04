@@ -3,12 +3,8 @@ jittor-warmup_match
 
 | 第三届计图挑战赛开源文档
 
-# Jittor 草图生成风景比赛 baseline
-| 标题名称包含赛题、方法
-
-![主要结果](https://s3.bmp.ovh/imgs/2022/04/19/440f015864695c92.png)
-
-｜展示方法的流程特点或者主要结果等
+热身赛题介绍
+本赛道将在数字图片数据集 MNIST 上训练 Conditional GAN（Conditional generative adversarial nets）模型，通过输入一个随机向量 z 和额外的辅助信息 y (如类别标签)，生成特定数字的图像。
 
 ## 简介
 | 简单介绍项目背景、项目特点
@@ -19,7 +15,21 @@ jittor-warmup_match
 ## 安装 
 | 介绍基本的硬件需求、运行环境、依赖安装方法
 
-本项目可在 2 张 2080 上运行，训练时间约为 6 小时。
+本项目可在 1 张 GPU :
+
+	NVIDIA GeForce RTX 2080 Ti
+
+	驱动程序版本:	31.0.15.3623
+	驱动程序日期:	2023/6/8
+	DirectX 版本:	12 (FL 12.1)
+	物理位置：	PCI 总线 1、设备 0、功能 0
+
+	利用率	1%
+	专用 GPU 内存	1.7/11.0 GB
+	共享 GPU 内存	0.1/32.0 GB
+	GPU 内存	1.8/43.0 GB ,
+
+运行训练时间约为 8 小时。
 
 #### 运行环境
 - ubuntu 20.04 LTS
@@ -32,38 +42,10 @@ jittor-warmup_match
 pip install -r requirements.txt
 ```
 
-#### 预训练模型
-预训练模型模型下载地址为 https:abc.def.gh，下载后放入目录 `<root>/weights/` 下。
-
-## 数据预处理
-| 介绍数据预处理方法，可选
-
-将数据下载解压到 `<root>/data` 下，执行以下命令对数据预处理：
-```
-bash scripts/prepross.sh
-```
-
 ## 训练
 ｜ 介绍模型训练的方法
 
-单卡训练可运行以下命令：
-```
-bash scripts/train.sh
-```
-
-多卡训练可以运行以下命令：
-```
-bash scripts/train-multigpu.sh
-```
-
-## 推理
-｜ 介绍模型推理、测试、或者评估的方法
-
-生成测试集上的结果可以运行以下命令：
-
-```
-bash scripts/test.sh
-```
+python CGAN.py
 
 ## 致谢
 | 对参考的论文、开源库予以致谢，可选
