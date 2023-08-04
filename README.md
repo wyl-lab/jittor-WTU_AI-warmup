@@ -32,9 +32,11 @@ jittor-warmup_match
 运行训练时间约为 8 小时。
 
 #### 运行环境
-- ubuntu 20.04 LTS
-- python >= 3.7
-- jittor >= 1.3.0
+- Windows 10 
+- python                    3.7.6
+- pytorch                   1.9.0           py3.7_cuda10.2_cudnn7_0
+- torchvision               0.10.0               py37_cu102    pytorch
+- opencv-python             4.5.3.56                 pypi_0    pypi
 
 #### 安装依赖
 执行以下命令安装 python 依赖
